@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+   <meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if title %}
+    <title>{{title}}</title>
+    {% else %}
+    <title>RRO: Rapid Real Estate Offer</title>
+    {% endif %}
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    {% block head %}
+	<link rel="shortcut icon" href="{{ url_for('static', filename='rroLogoMini.ico') }}">
+    <link rel="stylesheet/less" href="{{ url_for('static', filename='styles.less') }}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{{ url_for('static', filename='iconic_stroke.css') }}"> 
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/less.js/1.3.3/less.min.js "></script> 
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-42217251-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	{% endblock %}
+  </head>
+  <body>
+    <header>
+		<div class="header">
+			<ul class="brokerInfo">
+				<li>RCG Properties</li>
+				<li class="dre">BRE #01924811</li>
+			</ul>
+			<ul class="socialIcons clearfix">
+				<li><a href="#"><img src="{{ url_for('static',filename='images/48x48_facebook.png') }}" /></a></li>
+				<li><a href="#"><img src="{{ url_for('static',filename='images/48x48_twitter.png') }}" /></a></li>
+				<li><a href="#"><img src="{{ url_for('static',filename='images/48x48_linkedin.png') }}" /></a></li>
+				<li><a href="#"><img src="{{ url_for('static',filename='images/48x48_googleplus.png') }}" /></a></li>
+			</ul>
+		</div>
+	</header>
+    {% block content %}{% endblock %}
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
